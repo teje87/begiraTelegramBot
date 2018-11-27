@@ -2,5 +2,19 @@
     "telegram" :  {
         "token" : "770454461:AAF20wjPmk_GA5H0r0VVTAg-XS3yY2vBWBA" ,
         "chatId" : "125672177"
+    },
+    "URI" : {
+        "station4" : "192.168.1.60",
+        "station7" : "192.168.1.146"
+    },
+    "ams" : [
+        {"name": "station4", "host":"192.168.1.60",
+        "amsNetIdSource": "192.168.1.80.1.1",
+        "amsNetIdTarget" : "169.254.91.243.1.1",
+        "amsPortTarget" : 301,
+        "port" : 48898 }
+    ],
+    "omron" : {
+    
     }
 }

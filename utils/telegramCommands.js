@@ -1,9 +1,9 @@
 
+let omronFinsUtils = require('./omronFins')
 
- module.exports =  [
-        { command : "/volpak" , memoryAdress : "D1002" , recordNumber: "1" , text: "Chips empaquetados :"}
-    ]
+const telegramCommands = [
+    { command : "/volpak" , memoryAdress : "D1002" , recordNumber: "1" , text: "Chips empaquetados :", clientType: "finsClient", util: "omronFinsUtils"   }
+]
 
-
- 
+module.exports = { telegramCommands }
 
