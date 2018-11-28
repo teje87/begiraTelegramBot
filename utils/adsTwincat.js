@@ -1,5 +1,5 @@
-var ads = require('node-ads')
-const config = require('../config/config.json');
+var ads = require('node-ads');
+const statusMessages = require('../config/statusMessages.json');
 const {chatId,bot} = require('../botInit');
 
 var options = {
@@ -28,7 +28,7 @@ let adsConnectAndListen = (myHandle, options) => {
     
     adsTwincatClient.on('notification', function(handle){
         console.log(handle.value);
-        bot.sendMessage(chatId, "station5 :" + handle.value);
+        bot.sendMessage(chatId, "station5 :" + statusMessages.station5[handle.value]);
     })
     
     

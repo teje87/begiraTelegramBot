@@ -1,0 +1,9 @@
+{
+    "station5": {
+        "0" : "Estación sin inicializar",
+        "1" : "Estación inicializada",
+        "2" : "",
+        "3" : "Estación en marcha"
+    }
+
+}
