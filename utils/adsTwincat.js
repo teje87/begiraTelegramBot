@@ -5,7 +5,7 @@ const {chatId,bot} = require('../botInit');
 var options = {
     host: "192.168.1.60",
     amsNetIdTarget: "169.254.91.243.1.1",
-    amsNetIdSource: "192.168.1.80.1.1",
+    amsNetIdSource: "192.168.1.93.1.1",
     amsPortTarget: 301,
     port: 48898
 }
