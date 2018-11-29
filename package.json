@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "node-ads": "^1.4.3",
+    "node-ads-api": "^1.4.8",
     "node-hid": "^0.7.4",
     "node-telegram-bot-api": "^0.30.0",
     "omron-fins": "git://github.com/patrick--/node-omron-fins.git",
