@@ -11,7 +11,7 @@ const telegramCommands = [
 
 
     // EXCEL
-    { command: "/turnos" , text: "Estos son los turnos del mes : " , xlxsPath: "../assets/excell/turnos.xlsx", worksheetName: "turnos" , excell: true , method: "formatTurnos"}
+    { command: "/turnos" , text: "Estos son los turnos del mes : " , xlxsPath: "./assets/excell/turnos.xlsx", worksheetName: "turnos" , excell: true , method: "formatTurnos"}
 ]
 
 module.exports = { telegramCommands }
