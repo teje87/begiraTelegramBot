@@ -54,7 +54,7 @@ let formatTurnos = async (xlsxPath, worksheetName) => {
     ]
     
     responseTurnos.forEach((week)=>{
-        responseText = responseText.concat(" \n <b> $week.fecha </b> \n Turno de mañana: $week.mañana \n Turno de tarde: $week.tarde \n Turno de noche: $week.noche \n ")
+        responseText = responseText.concat(" \n <b> " + week.fecha + " </b> \n Turno de mañana: " + week.mañana  + "\n Turno de tarde: " + week.tarde + "\n Turno de noche: " + week.noche + "\n ")
     })
     return responseText;
 }
