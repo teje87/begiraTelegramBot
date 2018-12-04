@@ -20,8 +20,10 @@ bot.on('message', (msg) => {
 	
 	// Check the command coming from telegram
 	telegramCommands.forEach((command)=>{
-		if(command.command === msg.text){
-			omronFinsUtils.finsRead(command)
+		if(command.command === msg.text.toLowerCase()){
+
+			command.fins ? omronFinsUtils.finsRead(command) : null
+			command.chat ?  bot.sendMessage(chatId, command.text, {parse_mode : "HTML"}) : null
 			notificationText = command.text;
 		}
 	})
