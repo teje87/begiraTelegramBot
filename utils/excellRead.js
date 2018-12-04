@@ -21,6 +21,7 @@ let worksheetToArray = async (xlsxPath, worksheetName) => {
 let formatTurnos = async (xlsxPath, worksheetName) => {
 
     let responseTurnos = [] ;
+    let responseText = "";
 
     let preformatTurnos = await worksheetToArray(xlsxPath, worksheetName);
     
@@ -52,7 +53,10 @@ let formatTurnos = async (xlsxPath, worksheetName) => {
 
     ]
     
-    return responseTurnos;
+    responseTurnos.forEach((week)=>{
+        responseText = responseText.concat(" \n <b> $week.fecha </b> \n Turno de mañana: $week.mañana \n Turno de tarde: $week.tarde \n Turno de noche: $week.noche \n ")
+    })
+    return responseText;
 }
 
 

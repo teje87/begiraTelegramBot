@@ -27,7 +27,7 @@ bot.on('message', (msg) => {
 			command.chat ?  bot.sendMessage(chatId, command.text, {parse_mode : "HTML"}) : null
 			command.excell ?
 						excellUtils[command.method](command.xlxsPath,command.worksheetName)
-							.then((result) => bot.sendMessage(chatId, command.text + JSON.stringify(result) )) 
+							.then((result) => bot.sendMessage(chatId, command.text + result )) 
 						: null
 
 			notificationText = command.text;
