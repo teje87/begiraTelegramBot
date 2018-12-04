@@ -1,6 +1,7 @@
 process.env["NTBA_FIX_319"] = 1;
 const omronFinsUtils = require('./utils/omronFins');
-const adsTwincatUtils = require('./utils/adsTwincat')
+const adsTwincatUtils = require('./utils/adsTwincat');
+const excellUtils = require('./utils/excellRead');
 const TelegramBot = require('node-telegram-bot-api');
 const {telegramCommands} = require('./utils/telegramCommands');
 const {chatId, bot} = require('./botInit');
@@ -24,6 +25,11 @@ bot.on('message', (msg) => {
 
 			command.fins ? omronFinsUtils.finsRead(command) : null
 			command.chat ?  bot.sendMessage(chatId, command.text, {parse_mode : "HTML"}) : null
+			command.excell ?
+						excellUtils[command.method](command.xlxsPath,command.worksheetName)
+							.then((result) => bot.sendMessage(chatId, command.text + JSON.stringify(result) )) 
+						: null
+
 			notificationText = command.text;
 		}
 	})
